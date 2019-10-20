@@ -15,7 +15,6 @@ if not sys.argv[2].isdigit():
 
 n = int(sys.argv[1])
 m = int(sys.argv[2])
-
 n = 3
 m = 1
 iterations = 100000
@@ -55,6 +54,22 @@ def createDataset():
         [1,1,1,1]
     ])
     training_label = np.array([[0],[0],[0],[0],[1],[1],[1],[1]])
+
+def readfile(filename):
+    input_data = []
+    output_data = []
+    with open(filename) as file:
+        for line in file:
+            line = line.strip()
+            if (line.startswith('0') or line.startswith('1')):
+                input, output = line.split('\t')
+                input_data.append(np.array(input.split(' ')))
+                output_data.append(np.array(output.split(' ')))
+    return np.array(input_data)[:,:-1].astype(np.uint8),
+        np.array(output_data).astype(np.uint8)
+
+
+trainig_data, training_label = readfile('PA-A-train.dat')
 
 def squaredError(expected, output):
     expected_vec = np.full(output.shape, expected)
