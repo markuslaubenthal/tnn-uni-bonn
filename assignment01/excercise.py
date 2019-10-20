@@ -51,11 +51,6 @@ expected = np.zeros(m)
 
 
 
-
-
-
-
-
 iterations = 100000
 learning_rate = 0.1
 
