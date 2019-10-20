@@ -1,6 +1,5 @@
 import numpy as np
 import sys
-import matplotlib.pyplot as plt
 
 # Initial Variable Definitions
 n, m = None, None
