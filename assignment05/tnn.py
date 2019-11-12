@@ -54,7 +54,7 @@ centers = np.array([[0,0], [0,1], [1,0], [1,1]])
 
 def gradient_descent(centers, weights, sigma):
     global H, M, N, eta
-    for it in range(5000):
+    for it in range(50000):
         for index, pattern in enumerate(learning_data):
             label = label_data[index]
             output = feedforward(centers, weights, pattern, sigma)
