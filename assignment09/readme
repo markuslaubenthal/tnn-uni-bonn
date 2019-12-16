@@ -1,0 +1,8 @@
+Authors: Markus Laubenthal, Lennard Alms
+
+execute: python hopfield.py
+
+Theta, training patterns, and test patterns can be set on top of file.
+(Examples are given as comment)
+If  no patterns are created manually, they will be created randomized.
+For every input the temporary steps are printed until convergence.
